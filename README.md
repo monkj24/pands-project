@@ -4,15 +4,17 @@ by Joanna Mnich
 
 # 1. Introduction
 
-The Iris dataset was used as a foundational example to apply core data analytics techniques, such as data visualization, statistical analysis, and classification.
-Iris species were classified using supervised learning methods such as logistic regression and decision trees based on sepal and petal dimensions.
-Pairplots and boxplots were used to visually examine relationships between flower measurements and species, helping to identify patterns and correlations.
-Using the Iris dataset allowed us to implement the full data analysis workflow—from data exploration and visualization to model building and evaluation.
+This project is part of the Programming and Scripting coursework.
+The objective is to apply programming techniques and basic machine learning methods to solve a real-world classification problem.
+It covers fundamental concepts such as data collection, cleansing, visualization, and interpretation.
+The project investigates statistical approaches, data collection methods, and fundamental machine learning algorithms for extracting useful information from data
+
+# 2. Iris Data
+
+
 
 The simplicity and structure of the Iris dataset made it an ideal starting point for understanding fundamental Programming and Scripting.
 
 <img src="iris2.png" alt="Iris flower" width="300"/>
 
 Photo by <a href="https://www.thespruce.com/irises-for-flower-garden-1315808/" rel="nofollow">Irises</a>.</p> 
-
-# 2. Iris Data
