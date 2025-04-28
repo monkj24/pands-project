@@ -11,7 +11,7 @@ Using the Iris dataset allowed us to implement the full data analysis workflowâ€
 
 The simplicity and structure of the Iris dataset made it an ideal starting point for understanding fundamental Programming and Scripting.
 
-![ Iris](images/iris2.png)
+![ Iris](iris2.png)
 <img src="images/iris2.png" alt="Iris flower" width="300"/>
 
 Photo by <a href="https://www.thespruce.com/irises-for-flower-garden-1315808/" rel="nofollow">Irises</a>.</p> 
