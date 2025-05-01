@@ -13,7 +13,7 @@ import zipfile
 from io import BytesIO
 
 # Define the local path to the ZIP file
-zip_file_path = 'iris.data.zip'  # Update with the correct path to your local ZIP file
+zip_file_path = 'iris_data.txt'  # Update with the correct path to your local ZIP file
 
 # Define column names based on the dataset description
 column_names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class']
