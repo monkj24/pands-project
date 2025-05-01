@@ -18,3 +18,11 @@ The simplicity and structure of the Iris dataset made it an ideal starting point
 <img src="iris2.png" alt="Iris flower" width="300"/>
 
 Photo by <a href="https://www.thespruce.com/irises-for-flower-garden-1315808/" rel="nofollow">Irises</a>.</p> 
+
+
+# 3. Steps of creating project
+#### The Iris dataset was loaded using url from UC Irvine Machine Learning Repository archive.
+#### https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+#### uploaded data is stored in zip file in library
+#### Zip file was extracted before loading into repository
+#### function return with iris data
