@@ -5,6 +5,7 @@
 
 import pandas as pd
 import math
+import os
 
 # Define column names based on the dataset structure
 column_names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class']
@@ -12,9 +13,16 @@ column_names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'c
 # Read the .data file with no header row
 df = pd.read_csv('iris_data/iris.data', names=column_names)
 
+# Check the shape of the dataset
+print("Shape of the dataset: ", df.shape)
+
+
 # Preview the data
 print(df.head())
 
+
+
+''''
 # Calculate the mean of each feature
 
 variable_means = df.mean(numeric_only=True)
@@ -44,4 +52,4 @@ print(variable_stdev)
 variable_median = df.median()
 print("Median of each variable:")
 print(variable_median)
-
+'''
