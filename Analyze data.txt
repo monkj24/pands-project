@@ -1,4 +1,4 @@
 
 
 Used code print(df.head) doesn't show the full data, only 4 rows. I have to add 150 to the code print(df.head(150))
-to show me the first 4 rows and a few last ones.
+to show me the first 4 rows and a few last ones.# https://chatgpt.com/c/68163a89-4bb4-800b-a7d9-6f6f51f210d6
