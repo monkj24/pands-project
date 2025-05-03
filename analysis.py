@@ -1,7 +1,7 @@
 # Iris Data Set
 # Author : Joanna Mnich
 
-# 1: Source the Data Set
+# 1: Analyze data
 
 import pandas as pd
 import math
@@ -10,22 +10,21 @@ import matplotlib.pyplot as plt
 
 
 # Define column names based on the dataset structure
-column_names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class']
+column_names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'] 
 
-# Read the .data file with no header row
-df = pd.read_csv('iris_data/iris.data', names=column_names)
+# Read the data file 
+df = pd.read_csv('iris_data/iris.data', names=column_names)  #function read CSV file into a Data Frame, use path to iris data set file
 
 # Check the shape of the dataset
-print("Shape of the dataset: ", df.shape)
+print("Shape of the dataset: ", df.shape) # shape shows information about structure of data (rows, columns)
 
 # Preview the data
 print(df.head(150))
 
 
-''''
 # Calculate the mean of each feature
 
-variable_means = df.mean(numeric_only=True)
+variable_means = df.mean(numeric_only=True) # numeric_only=True , tells pandas to calculate only column with numeric data types
 print("Mean of each variable:")
 print(variable_means)
 
@@ -40,7 +39,7 @@ print(variable_minimum)
 variable_maximum = df.max()
 print("Maximum of each variable:")
 print(variable_maximum)
-
+'''
 # Calculate the standard deviation of each feature
 
 variable_stdev = df.std()
