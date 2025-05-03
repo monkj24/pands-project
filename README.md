@@ -43,4 +43,7 @@ The Iris dataset was loaded as a zip file using url from the UC Irvine Machine L
 After downloading zip file was extracted before loading into the repository
 In my repository, using code to read data, df = pd.read_csv, the Function returns the iris data.
 
+### C) Analysis of Data
+
+
 
