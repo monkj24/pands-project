@@ -21,6 +21,7 @@ print("Shape of the dataset: ", df.shape) # shape shows information about struct
 # Preview the data
 print(df.head(150))
 
+# A) Math calculation
 
 # Calculate the mean of each feature
 
@@ -30,31 +31,32 @@ print(variable_means)
 
 # Calculate the minimum of each feature
 
-variable_minimum = df.min()
+variable_minimum = df.min(numeric_only=True)
 print("Minimum of each variable:")
 print(variable_minimum)
 
 # Calculate the maximum of each feature
 
-variable_maximum = df.max()
+variable_maximum = df.max(numeric_only=True)
 print("Maximum of each variable:")
 print(variable_maximum)
-'''
+
 # Calculate the standard deviation of each feature
 
-variable_stdev = df.std()
+variable_stdev = df.std(numeric_only=True)
 print("Standard Deviation of each variable:")
 print(variable_stdev)
 
 # Calculate the median of each feature
 
-variable_median = df.median()
+variable_median = df.median(numeric_only=True)
 print("Median of each variable:")
 print(variable_median)
 
 
+# B.) Histogram
 
-# Histogram
+
 np.random.seed(1) 
 
 normData = np.random.normal(size=10000)
