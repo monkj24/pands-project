@@ -5,7 +5,9 @@
 
 import pandas as pd
 import math
-import os
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 # Define column names based on the dataset structure
 column_names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class']
@@ -16,10 +18,8 @@ df = pd.read_csv('iris_data/iris.data', names=column_names)
 # Check the shape of the dataset
 print("Shape of the dataset: ", df.shape)
 
-
 # Preview the data
-print(df.head())
-
+print(df.head(150))
 
 
 ''''
@@ -52,4 +52,14 @@ print(variable_stdev)
 variable_median = df.median()
 print("Median of each variable:")
 print(variable_median)
+
+
+
+# Histogram
+np.random.seed(1) 
+
+normData = np.random.normal(size=10000)
+
+plt.hist(normData)
+plt.show()
 '''
