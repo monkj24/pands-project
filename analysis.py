@@ -92,4 +92,22 @@ for column in numeric_columns:
     plt.savefig(f'{column}_hist.png')
     plt.close()
 
-# 3: 
+# 3: Scatter plots for each pair of numeric variables
+
+import seaborn as sns
+
+# Generate scatter plots for each pair of numeric variables
+numeric_columns = df.select_dtypes(include='float64').columns
+
+for i in range(len(numeric_columns)):
+    for j in range(i+1, len(numeric_columns)):
+        col1, col2 = numeric_columns[i], numeric_columns[j]
+        plt.figure(figsize=(6, 4))
+        sns.scatterplot(data=df, x=col1, y=col2, hue='class', palette='viridis')
+        plt.title(f'Scatter plot of {col1} vs {col2}')
+        plt.xlabel(col1)
+        plt.ylabel(col2)
+        plt.legend(title='Class')
+        plt.tight_layout()
+        plt.savefig(f'{col1}_vs_{col2}.png')
+        plt.close()
