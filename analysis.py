@@ -20,7 +20,7 @@ print("Shape of the dataset: ", df.shape) # shape shows information about struct
 
 # Preview the data
 print(df.head(150))
-
+'''
 
 # A) Math calculation
 
@@ -73,33 +73,23 @@ with open('summary.txt', 'w') as f:
     f.write(f"  Unique Classes: {df['class'].nunique()}\n")
     f.write(f"  Classes: {df['class'].unique().tolist()}\n")
     f.write(f"  Class Counts:\n{df['class'].value_counts()}\n")
+'''
 
+# 2: Generate and save histograms for each numerical variable
 
-# B.) Histogram for each variable
-
-import numpy as np
 import matplotlib.pyplot as plt
 
-# Parameters for the normal distribution
-mean = 5
-std_dev = 2
-num_samples = 1000
+numeric_columns = df.select_dtypes(include='float64').columns
 
-np.random.seed(1)
-normData = np.random.normal(mean, std_dev, num_samples)
+for column in numeric_columns:
+    plt.figure()
+    plt.hist(df[column], bins=20, color='skyblue', edgecolor='black')
+    plt.title(f'Histogram of {column}')
+    plt.xlabel(column)
+    plt.ylabel('Frequency')
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(f'{column}_hist.png')
+    plt.close()
 
-# the figure and primary axis
-fig, ax1 = plt.subplots()
-
-
-# Plot the histogram of the normal distribution
-
-ax1.hist(normData, bins=30, density=True, alpha=0.5, color='blue', label='Normal Distribution (µ=5, σ=2)')
-ax1.set_ylabel('Density', color='blue')
-ax1.tick_params(axis='y', labelcolor='blue')
-
-
-
-plt.hist(normData)
-plt.show()
-'''
+# 3: 
