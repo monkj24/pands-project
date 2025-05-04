@@ -1,0 +1,45 @@
+Summary of Numerical Variables:
+
+Column: sepal_length
+  Mean: 5.84
+  Median: 5.80
+  Std Dev: 0.83
+  Min: 4.30
+  Max: 7.90
+  Missing: 0
+
+Column: sepal_width
+  Mean: 3.05
+  Median: 3.00
+  Std Dev: 0.43
+  Min: 2.00
+  Max: 4.40
+  Missing: 0
+
+Column: petal_length
+  Mean: 3.76
+  Median: 4.35
+  Std Dev: 1.76
+  Min: 1.00
+  Max: 6.90
+  Missing: 0
+
+Column: petal_width
+  Mean: 1.20
+  Median: 1.30
+  Std Dev: 0.76
+  Min: 0.10
+  Max: 2.50
+  Missing: 0
+
+Summary of Categorical Variable:
+
+Column: class
+  Unique Classes: 3
+  Classes: ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']
+  Class Counts:
+class
+Iris-setosa        50
+Iris-versicolor    50
+Iris-virginica     50
+Name: count, dtype: int64
