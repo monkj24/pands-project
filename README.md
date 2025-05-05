@@ -38,12 +38,22 @@ Code in Python can:
 
 ### B) Iris data 
 
-The Iris dataset was loaded as a zip file using url from the UC Irvine Machine Learning Repository archive to my desktop file
+The Iris dataset was loaded as a zip file using the URL from the UC Irvine Machine Learning Repository archive to my desktop file
    https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
 After downloading zip file was extracted before loading into the repository
 In my repository, using code to read data, df = pd.read_csv, the Function returns the iris data.
 
 ### C) Analysis of Data
+
+### D) Histogram
+
+### E) Scatter plots
+
+### F) Box plots
+
+### G) Pairplot
+
+# 4. Referencees
 
 
 
