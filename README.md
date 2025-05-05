@@ -46,7 +46,7 @@ In my repository, using code to read data, df = pd.read_csv, the Function return
 ### C) Analysis of Data
 
 In this section, first I imported the necessary module (math), and libraries (pandas, matplotlib.pyplot, and numpy).
-Pandas library is like a spreadsheet, using DataFrames, to read and write the file, filter, and group data.
+Pandas library is like a spreadsheet, using DataFrames, to read and write files, filter, and group data.
 The Matplotlib.pyplot library helps make plots, histograms, and scatterplots.
 The Numpy library efficiently works with arrays, matrices, and mathematical functions.
 The math module makes basic mathematical function calculations.
@@ -57,7 +57,7 @@ In an analysis of the data, I start by defining the shape of the dataset. The sh
 In print, I have a little problem, because using print(df.head), the output shows me only the first 5 lines. After research, I decided to add in a separate bracket 150, to print, show me all rows, but with a break in the middle.
 
 A section of math calculation concentrates on mean, minimum, maximum, standard deviation, and median measurements. 
-From pandas.pydata I used the code to calculate 
+From pandas.pydata I used the code to calculate ....
 
 
 
@@ -72,10 +72,15 @@ From pandas.pydata I used the code to calculate
 ### G) Pairplot
 
 # 4. References
+
 4.1 Analysis of data
-https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html
+
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.
+
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html
+
 https://pandas.pydata.org/pandas-docs/stable/reference/frame.html
+
 4.2 Histogram
 
 
