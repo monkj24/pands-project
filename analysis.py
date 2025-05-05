@@ -20,7 +20,7 @@ print("Shape of the dataset: ", df.shape) # shape shows information about struct
 
 # Preview the data
 print(df.head(150))
-'''
+
 
 # A) Math calculation
 
@@ -53,7 +53,7 @@ print(variable_stdev)
 variable_median = df.median(numeric_only=True)
 print("Median of each variable:")
 print(variable_median)
-
+'''
 # B). Output summary statistics to summary.txt
 
 with open('summary.txt', 'w') as f:
@@ -91,7 +91,7 @@ for column in numeric_columns:
     plt.tight_layout()
     plt.savefig(f'{column}_hist.png')
     plt.close()
-'''
+
 # 3: Scatter plots for each pair of numeric variables
 
 import seaborn as sns
@@ -131,4 +131,4 @@ sns.pairplot(df, hue='class', palette='coolwarm')
 plt.savefig('pairplot.png')
 plt.close()
 
-
+'''
