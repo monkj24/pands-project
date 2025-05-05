@@ -1,7 +1,7 @@
 # Iris Data Set
 # Author : Joanna Mnich
 
-# 1: Analyze data
+# 1: Analysis of data
 
 import pandas as pd
 import math
@@ -73,7 +73,7 @@ with open('summary.txt', 'w') as f:
     f.write(f"  Unique Classes: {df['class'].nunique()}\n")
     f.write(f"  Classes: {df['class'].unique().tolist()}\n")
     f.write(f"  Class Counts:\n{df['class'].value_counts()}\n")
-'''
+
 
 # 2: Generate and save histograms for each numerical variable
 
@@ -91,7 +91,7 @@ for column in numeric_columns:
     plt.tight_layout()
     plt.savefig(f'{column}_hist.png')
     plt.close()
-
+'''
 # 3: Scatter plots for each pair of numeric variables
 
 import seaborn as sns
@@ -111,3 +111,24 @@ for i in range(len(numeric_columns)):
         plt.tight_layout()
         plt.savefig(f'{col1}_vs_{col2}.png')
         plt.close()
+
+
+# 4: Box Plots by Class
+
+# Create box plots for each numeric column by class
+
+for column in numeric_columns:
+    plt.figure(figsize=(6, 4))
+    sns.boxplot(x='class', y=column, data=df, hue='class', palette='Set2', showfliers=False)
+    plt.title(f'Boxplot of {column} by class')
+    plt.tight_layout()
+    plt.savefig(f'{column}_boxplot_by_class.png')
+    plt.close()
+
+# 5: Pairplot
+
+sns.pairplot(df, hue='class', palette='coolwarm')
+plt.savefig('pairplot.png')
+plt.close()
+
+
