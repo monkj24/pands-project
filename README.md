@@ -31,7 +31,7 @@ Photo by <a href="https://www.thespruce.com/irises-for-flower-garden-1315808/" r
 
 The IDE helps write, run, and debug the code. The code loads data, calculates, and creates plots and diagrams. 
 Code in Python can:
-- Calculate the means, standard deviation, and median from the loaded data.
+- Calculate the loaded data's means, standard deviation, and median.
 - Analyse data from libraries: pandas, numpy, seaborn, matplotlib
 - Create machine learning model: scikit-learn
 - Controls files and folders by creating automated scripts
@@ -45,7 +45,7 @@ In my repository, using code to read data, df = pd.read_csv, the Function return
 
 ### C) Analysis of Data
 
-In this section, first I imported the necessary module (math), and libraries (pandas, matplotlib.pyplot, and numpy).
+In this section, I first imported the necessary module (math) and libraries (pandas, matplotlib, pyplot, and numpy).
 Pandas library is like a spreadsheet, using DataFrames, to read and write files, filter, and group data.
 The Matplotlib.pyplot library helps make plots, histograms, and scatterplots.
 The Numpy library efficiently works with arrays, matrices, and mathematical functions.
@@ -56,14 +56,16 @@ Data is downloaded to the file iris_data/iris.data. Used code df = pd.read_csv()
 In an analysis of the data, I start by defining the shape of the dataset. The shape shows information about the structure of data(rows, columns). I used the function df - define.
 In print, I have a little problem, because using print(df.head), the output shows me only the first 5 lines. After research, I decided to add in a separate bracket 150, to print, show me all rows, but with a break in the middle.
 
-A section of math calculation concentrates on mean, minimum, maximum, standard deviation, and median measurements. 
-From pandas.pydata I used the code to calculate ....
+One the section of mathematical calculation focuses on measures of mean, minimum, maximum, standard deviation, and median. I used the code from Pandas.pydata to determine those particular measurements. I specify that only numeric data should be included in the calculation by using the numeric_only=True parameter in the generated code. 
+A summary of all calculations is included in the file summary.txt. With the help of AI  file summary includes data from the maths calculation from file analysis.py. The code separates the summary into numerical and categorical sections. Using loop code, all measurements with up to 2 decimal places are described. At the end is also used 'missing' to recognize early any error, missing value. 
 
 
 
 
 
 ### D) Histogram
+
+In statistics, a histogram is a graphical representation of the distribution of numerical data. A histogram visualizes the distribution of data in time, highlighting trends and patterns.
 
 ### E) Scatter plots
 
@@ -81,7 +83,27 @@ https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head
 
 https://pandas.pydata.org/pandas-docs/stable/reference/frame.html
 
-4.2 Histogram
+4.2 Summary file
+
+https://chatgpt.com/c/6819f351-f14c-800b-b3d1-b2ddc1bd1965        # basic help to summary file
+
+https://docs.python.org/3/library/functions.html#open              # open for wtiting
+
+https://docs.python.org/3/reference/compound_stmts.html#with       # statement 'with' to close when finished
+
+https://docs.python.org/3/library/io.html#io.TextIOBase.write      # f.write function
+
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.select_dtypes.html   # df.select_dtypes 
+
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.nunique.html     
+
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.unique.html
+
+https://numpy.org/doc/stable/reference/generated/numpy.ndarray.tolist.html
+
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html
+
+4.3 Histogram
 
 
 
