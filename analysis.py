@@ -24,57 +24,57 @@ print(df.head(150))
 
 # A) Math calculation
 
-# Calculate the mean of each feature
-
+# Calculate the mean of each variable
 variable_means = df.mean(numeric_only=True) # numeric_only=True , tells pandas to calculate only column with numeric data types
 print("Mean of each variable:")
 print(variable_means)
 
-# Calculate the minimum of each feature
+# Calculate the minimum of each variable
 
 variable_minimum = df.min(numeric_only=True)
 print("Minimum of each variable:")
 print(variable_minimum)
 
-# Calculate the maximum of each feature
+# Calculate the maximum of each variable
 
 variable_maximum = df.max(numeric_only=True)
 print("Maximum of each variable:")
 print(variable_maximum)
 
-# Calculate the standard deviation of each feature
+# Calculate the standard deviation of each variable
 
 variable_stdev = df.std(numeric_only=True)
 print("Standard Deviation of each variable:")
 print(variable_stdev)
 
-# Calculate the median of each feature
+# Calculate the median of each variable
 
 variable_median = df.median(numeric_only=True)
 print("Median of each variable:")
 print(variable_median)
-'''
+
 # B). Output summary statistics to summary.txt
 
-with open('summary.txt', 'w') as f:
-    f.write("Summary of Numerical Variables:\n\n")
-    for column in df.select_dtypes(include='float64').columns:
+with open('summary.txt', 'w') as f:         # open file summary.txt in write mode, and properly close after writing is finish
+    f.write("Summary of Numerical Variables:\n\n")   # write heading
+    for column in df.select_dtypes(include='float64').columns:   # Used loops through all columns to write statistics
         f.write(f"Column: {column}\n")
-        f.write(f"  Mean: {df[column].mean():.2f}\n")
+        f.write(f"  Mean: {df[column].mean():.2f}\n")  # write up to 2 decimal places
         f.write(f"  Median: {df[column].median():.2f}\n")
         f.write(f"  Std Dev: {df[column].std():.2f}\n")
         f.write(f"  Min: {df[column].min():.2f}\n")
         f.write(f"  Max: {df[column].max():.2f}\n")
-        f.write(f"  Missing: {df[column].isna().sum()}\n\n")
+        f.write(f"  Missing: {df[column].isna().sum()}\n\n") # counts missing value, detect early quality of data, and errors
     
     # Summary of categorical variable
-    f.write("Summary of Categorical Variable:\n\n")
-    f.write("Column: class\n")
-    f.write(f"  Unique Classes: {df['class'].nunique()}\n")
-    f.write(f"  Classes: {df['class'].unique().tolist()}\n")
-    f.write(f"  Class Counts:\n{df['class'].value_counts()}\n")
+    f.write("Summary of Categorical Variable:\n\n")  # code writes header about categorical column, adds also blank line after
+    f.write("Column: class\n")                       # class column na,e will be summerized
+    f.write(f"  Unique Classes: {df['class'].nunique()}\n") # nunique counts the number of class categories
+    f.write(f"  Classes: {df['class'].unique().tolist()}\n") # returns a NumPy array of unique values in the 'class' column, 
+                                                            # tolist(). converts array to list
+    f.write(f"  Class Counts:\n{df['class'].value_counts()}\n")  # counts and returns the series in each class
 
-
+'''
 # 2: Generate and save histograms for each numerical variable
 
 import matplotlib.pyplot as plt
