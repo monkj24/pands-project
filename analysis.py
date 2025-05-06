@@ -56,7 +56,7 @@ print(variable_median)
 # B). Output summary statistics to summary.txt
 
 with open('summary.txt', 'w') as f:         # open file summary.txt in write mode, and properly close after writing is finish
-    f.write("Summary of Numerical Variables:\n\n")   # write heading
+    f.write("Summary of Numerical Variables:\n\n")   # write header and add blank line
     for column in df.select_dtypes(include='float64').columns:   # Used loops through all columns to write statistics
         f.write(f"Column: {column}\n")
         f.write(f"  Mean: {df[column].mean():.2f}\n")  # write up to 2 decimal places
@@ -67,7 +67,7 @@ with open('summary.txt', 'w') as f:         # open file summary.txt in write mod
         f.write(f"  Missing: {df[column].isna().sum()}\n\n") # counts missing value, detect early quality of data, and errors
     
     # Summary of categorical variable
-    f.write("Summary of Categorical Variable:\n\n")  # code writes header about categorical column, adds also blank line after
+    f.write("Summary of Categorical Variable:\n\n")  # code writes header about categorical column, add also blank line after
     f.write("Column: class\n")                       # class column na,e will be summerized
     f.write(f"  Unique Classes: {df['class'].nunique()}\n") # nunique counts the number of class categories
     f.write(f"  Classes: {df['class'].unique().tolist()}\n") # returns a NumPy array of unique values in the 'class' column, 
