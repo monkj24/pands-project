@@ -1,7 +1,0 @@
-A histogram is a graphical representation used in statistics to show the distribution of numerical data.
-
-A histogram visualizes the distribution of data over a continuous time frames or duration, making it simpler to understand and
-
-highlighting trends and patterns.
-
-https://www.geeksforgeeks.org/histogram/
