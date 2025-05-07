@@ -57,15 +57,14 @@ In an analysis of the data, I start by defining the shape of the dataset. The sh
 In print, I have a little problem, because using print(df.head), the output shows me only the first 5 lines. After research, I decided to add in a separate bracket 150, to print, show me all rows, but with a break in the middle.
 
 One the section of mathematical calculation focuses on measures of mean, minimum, maximum, standard deviation, and median. I used the code from Pandas.pydata to determine those particular measurements. I specify that only numeric data should be included in the calculation by using the numeric_only=True parameter in the generated code. 
-A summary of all calculations is included in the file summary.txt. With the help of AI  file summary includes data from the maths calculation from file analysis.py. The code separates the summary into numerical and categorical sections. Using loop code, all measurements with up to 2 decimal places are described. At the end is also used 'missing' to recognize early any error, missing value. 
-
-
-
+A summary of all calculations is included in the file summary.txt. With the help of AI  file summary includes data from the maths calculation from file analysis.py. The code separates the summary into numerical and categorical sections. All measurements with up to 2 decimal places are described using loop code. At the end is also used 'missing' to recognize early any error, missing value. 
 
 
 ### D) Histogram
 
-In statistics, a histogram is a graphical representation of the distribution of numerical data. A histogram visualizes the distribution of data in time, highlighting trends and patterns.
+In statistics, a histogram is a graphical representation of the distribution of numerical data. A histogram visualizes data distribution in time, highlighting trends and patterns.
+The data frame was filtered to include only column names and data type float64. The float64 is a large bit of memory, used when precision matters mostly in scientific calculations. Allows concentrating on floating-point numbers, numbers with decimal places, and showing data to 17th decimal places. 
+To create histogram I used loop function 
 
 ### E) Scatter plots
 
@@ -105,7 +104,7 @@ https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_c
 
 4.3 Histogram
 
-
+https://stackoverflow.com/questions/43440821/the-real-difference-between-float32-and-float64   # float64 explanation
 
 
 
