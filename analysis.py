@@ -55,7 +55,7 @@ print(variable_median)
 
 # B). Output summary statistics to summary.txt
 
-with open('summary.txt', 'w') as f:         # open file summary.txt in write mode, and properly close after writing is finish
+with open('summary.txt', 'w') as f:         # open file summary.txt in write mode, and properly close using'with' statement after writing is finish
     f.write("Summary of Numerical Variables:\n\n")   # write header and add blank line
     for column in df.select_dtypes(include='float64').columns:   # Used loops through all columns to write statistics
         f.write(f"Column: {column}\n")
@@ -74,22 +74,20 @@ with open('summary.txt', 'w') as f:         # open file summary.txt in write mod
                                                             # tolist(). converts array to list
     f.write(f"  Class Counts:\n{df['class'].value_counts()}\n")  # counts and returns the series in each class
 
-'''
+
 # 2: Generate and save histograms for each numerical variable
 
-import matplotlib.pyplot as plt
+numeric_columns = df.select_dtypes(include='float64').columns   #numeric_columns is a list of all floats64 column names
 
-numeric_columns = df.select_dtypes(include='float64').columns
-
-for column in numeric_columns:
+for column in numeric_columns:   # used loop through each column
     plt.figure()
-    plt.hist(df[column], bins=20, color='skyblue', edgecolor='black')
+    plt.hist(df[column], bins=20, color='skyblue', edgecolor='black')   # plots histogram with special colour choosed, divided into 20 bins
     plt.title(f'Histogram of {column}')
     plt.xlabel(column)
     plt.ylabel('Frequency')
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig(f'{column}_hist.png')
+    plt.savefig(f'{column}_hist.png')  # Histogram saved into files with seperate name of column () _hist.png
     plt.close()
 
 # 3: Scatter plots for each pair of numeric variables
@@ -131,4 +129,4 @@ sns.pairplot(df, hue='class', palette='coolwarm')
 plt.savefig('pairplot.png')
 plt.close()
 
-'''
+
