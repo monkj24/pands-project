@@ -85,8 +85,8 @@ for column in numeric_columns:   # used loop through each column
     plt.title(f'Histogram of {column}')
     plt.xlabel(column)
     plt.ylabel('Frequency')
-    plt.grid(True)
-    plt.tight_layout()
+    plt.grid(True)    # to easy read value adds grid to plot
+    plt.tight_layout()  # tidy up labels, title
     plt.savefig(f'{column}_hist.png')  # Histogram saved into files with seperate name of column () _hist.png
     plt.close()
 
