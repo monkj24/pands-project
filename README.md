@@ -64,7 +64,9 @@ A summary of all calculations is included in the file summary.txt. With the help
 
 In statistics, a histogram is a graphical representation of the distribution of numerical data. A histogram visualizes data distribution in time, highlighting trends and patterns.
 The data frame was filtered to include only column names and data type float64. The float64 is a large bit of memory, used when precision matters mostly in scientific calculations. Allows concentrating on floating-point numbers, numbers with decimal places, and showing data to 17th decimal places. 
-To create histogram I used loop function 
+To create histogram I used loop function which by running every each column creates different histograms. Code plt.figure(). creates fresh seperate histogram from data, without this the plots might cross or be drawn on the same figure. Plotted histograms described the count of bins, special colours, title and labels.
+The grids is adding to the plot to easy reading of value and function plt.tight_layout() tidy up lables and title to be clear visible. 
+At the aned histograms are saved in the files named after column name with the end .png.
 
 ### E) Scatter plots
 
@@ -105,6 +107,23 @@ https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_c
 4.3 Histogram
 
 https://stackoverflow.com/questions/43440821/the-real-difference-between-float32-and-float64   # float64 explanation
+
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.select_dtypes.html  # Dataframe ,df.type with float64
+
+https://docs.python.org/3/tutorial/controlflow.html#for-statements   # loop statements
+
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html   # plotting figure
+
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html   # draws histogram
+
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html   # add title, labels
+
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.grid.html    # add grid
+
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.tight_layout.html  # to not ovrlaps, add tight layout
+
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html   # saving histogram to file
+
 
 
 
