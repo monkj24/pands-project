@@ -88,7 +88,7 @@ for column in numeric_columns:   # used loop through each column
     plt.grid(True)    # to easy read value adds grid to plot
     plt.tight_layout()  # tidy up labels, title
     plt.savefig(f'{column}_hist.png')  # Histogram saved into files with seperate name of column () _hist.png
-    plt.close()
+    plt.close()   # close figure and prevent interruption with the following plot
 
 # 3: Scatter plots for each pair of numeric variables
 
