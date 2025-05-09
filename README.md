@@ -56,7 +56,7 @@ Data is downloaded to the file iris_data/iris.data. Used code df = pd.read_csv()
 In an analysis of the data, I start by defining the shape of the dataset. The shape shows information about the structure of data(rows, columns). I used the function df - define.
 In print, I have a little problem, because using print(df.head), the output shows me only the first 5 lines. After research, I decided to add in a separate bracket 150, to print, show me all rows, but with a break in the middle.
 
-One the section of mathematical calculation focuses on measures of mean, minimum, maximum, standard deviation, and median. I used the code from Pandas.pydata to determine those particular measurements. I specify that only numeric data should be included in the calculation by using the numeric_only=True parameter in the generated code. 
+The section of mathematical calculation focuses on measures of mean, minimum, maximum, standard deviation, and median. I used the code from Pandas.pydata to determine those particular measurements. I specify that only numeric data should be included in the calculation by using the numeric_only=True parameter in the generated code. 
 A summary of all calculations is included in the file summary.txt. With the help of AI  file summary includes data from the maths calculation from file analysis.py. The code separates the summary into numerical and categorical sections. All measurements with up to 2 decimal places are described using loop code. At the end is also used 'missing' to recognize early any error, missing value. 
 
 
@@ -64,11 +64,27 @@ A summary of all calculations is included in the file summary.txt. With the help
 
 In statistics, a histogram is a graphical representation of the distribution of numerical data. A histogram visualizes data distribution in time, highlighting trends and patterns.
 The data frame was filtered to include only column names and data type float64. The float64 is a large bit of memory, used when precision matters mostly in scientific calculations. Allows concentrating on floating-point numbers, numbers with decimal places, and showing data to 17th decimal places. 
-To create histogram I used loop function which by running every each column creates different histograms. Code plt.figure(). creates fresh seperate histogram from data, without this the plots might cross or be drawn on the same figure. Plotted histograms described the count of bins, special colours, title and labels.
-The grids is adding to the plot to easy reading of value and function plt.tight_layout() tidy up lables and title to be clear visible. 
-At the aned histograms are saved in the files named after column name with the end .png.
+To create a histogram, I used a loop function, which, by running through every column, creates different histograms. The code plt.figure(). creates a fresh, separate histogram from the data; without this, the plots might cross or be drawn on the same figure. Plotted histograms describe the count of bins, special colours, titles, and labels.
+The grids are adding to the plot for easy reading of values. The function plt.tight_layout() tidies up lables and title to be clear visible. 
+At the end, histograms are saved in files named after the column name with the extension .png.
 
 ### E) Scatter plots
+
+A scatter plot is a mathematical tool used to display data and show the relationship between two variables.  It is typically used to plot the relationship between one independent and one dependent variable. Each dot's position on the horizontal and vertical axes represents a single data point's value.
+Here, I use the seaborn library to more easily produce a scatter plot and create styling and color. Like in the histogram, the same function is used to filter data to include only column names with data type float64. Double 'for' used in a function must generate a relationship between column names, for example (sepal_length vs sepal_width), but avoid relationships of opposite (sepal_width vs sepal_length), and relationships of the same names (sepal_length vs sepal_length).
+I asked AI to explain me realtionship between columns in code col1, col2 =().  The table below describes those connection to understand better:
+| `i` | `j` | `col1`          | `col2`          |
+| --- | --- | --------------- | --------------- |
+| 0   | 1   | 'sepal\_length' | 'sepal\_width'  |
+| 0   | 2   | 'sepal\_length' | 'petal\_length' |
+| 0   | 3   | 'sepal\_length' | 'petal\_width'  |
+| 1   | 2   | 'sepal\_width'  | 'petal\_length' |
+| 1   | 3   | 'sepal\_width'  | 'petal\_width'  |
+| 2   | 3   | 'petal\_length' | 'petal\_width'  |
+
+The seaborn function sns.scatterplot() is used to plot one variable against another, seperates by class color (hue='class) , types gradient (palette='viridis').
+To the plot was added legend, title and labels with overlap prevention. At the end plots was saving as a png files named after two columns.
+
 
 ### F) Box plots
 
@@ -108,21 +124,26 @@ https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_c
 
 https://stackoverflow.com/questions/43440821/the-real-difference-between-float32-and-float64   # float64 explanation
 
-https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.select_dtypes.html  # Dataframe ,df.type with float64
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.select_dtypes.html  # Dataframe,df.type with float64
 
 https://docs.python.org/3/tutorial/controlflow.html#for-statements   # loop statements
 
 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html   # plotting figure
 
-https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html   # draws histogram
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html   # draws a histogram
 
 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html   # add title, labels
 
 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.grid.html    # add grid
 
-https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.tight_layout.html  # to not ovrlaps, add tight layout
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.tight_layout.html  # to not overlap, add tight layout
 
 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html   # saving histogram to file
+
+4.4 Scatter Plot
+
+https://www.geeksforgeeks.org/scatter-plot/    # what is scatter plot
+https://chatgpt.com/c/681dc425-2774-800b-8247-00a5db63ac3a   # explanaition of realtionship between columns
 
 
 
