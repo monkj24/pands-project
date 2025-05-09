@@ -77,7 +77,7 @@ with open('summary.txt', 'w') as f:         # open file summary.txt in write mod
 
 # 2: Generate and save histograms for each numerical variable
 
-numeric_columns = df.select_dtypes(include='float64').columns   #numeric_columns is a list of all floats64 column names
+numeric_columns = df.select_dtypes(include='float64').columns   # numeric_columns is a list of all floats64 column names
 
 for column in numeric_columns:   # used loop through each column
     plt.figure()
@@ -98,10 +98,10 @@ import seaborn as sns
 numeric_columns = df.select_dtypes(include='float64').columns
 
 for i in range(len(numeric_columns)):
-    for j in range(i+1, len(numeric_columns)):
-        col1, col2 = numeric_columns[i], numeric_columns[j]
+    for j in range(i+1, len(numeric_columns)):   # generates relationship between columns
+        col1, col2 = numeric_columns[i], numeric_columns[j]  
         plt.figure(figsize=(6, 4))
-        sns.scatterplot(data=df, x=col1, y=col2, hue='class', palette='viridis')
+        sns.scatterplot(data=df, x=col1, y=col2, hue='class', palette='viridis')  # use seaborn to plot
         plt.title(f'Scatter plot of {col1} vs {col2}')
         plt.xlabel(col1)
         plt.ylabel(col2)
