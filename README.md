@@ -15,7 +15,7 @@ The project investigates statistical approaches, data collection methods, and fu
 
 The simplicity and structure of the Iris dataset made it an ideal starting point for understanding fundamental Programming and Scripting.
 
-<img src="iris2.png" alt="Iris flower" width="300"/>
+<img src="iris_picture.png" alt="Iris flower" width="300"/>
 
 Photo by <a href="https://www.thespruce.com/irises-for-flower-garden-1315808/" rel="nofollow">Irises</a>.</p> 
 
