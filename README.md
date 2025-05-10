@@ -17,7 +17,7 @@ The simplicity and structure of the Iris dataset made it an ideal starting point
 
 <img src="iris_picture.png" alt="Iris flower" width="300"/>
 
-Photo by <a href="https://www.thespruce.com/irises-for-flower-garden-1315808/" rel="nofollow">Irises</a>.</p> 
+Photo by <a href="https://www.thespruce.com/irises-for-flower-garden-1315808/" rel="nofollow">Iris</a>.</p> 
 
 
 # 3. Steps of creating a project
