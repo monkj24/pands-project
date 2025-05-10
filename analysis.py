@@ -99,7 +99,8 @@ numeric_columns = df.select_dtypes(include='float64').columns
 
 for i in range(len(numeric_columns)):
     for j in range(i+1, len(numeric_columns)):   # generates relationship between columns
-        col1, col2 = numeric_columns[i], numeric_columns[j]  
+        col1 = numeric_columns[i]
+        col2 = numeric_columns[j] 
         plt.figure(figsize=(6, 4))
         sns.scatterplot(data=df, x=col1, y=col2, hue='class', palette='viridis')  # use seaborn to plot
         plt.title(f'Scatter plot of {col1} vs {col2}')
@@ -115,9 +116,9 @@ for i in range(len(numeric_columns)):
 
 # Create box plots for each numeric column by class
 
-for column in numeric_columns:
+for column in numeric_columns:   # Used loop function through each numeric column
     plt.figure(figsize=(6, 4))
-    sns.boxplot(x='class', y=column, data=df, hue='class', palette='Set2', showfliers=False)
+    sns.boxplot(x='class', y=column, data=df, hue='class', palette='Set2', showfliers=False)  # showfliers hides outliers beyond the whiskers
     plt.title(f'Boxplot of {column} by class')
     plt.tight_layout()
     plt.savefig(f'{column}_boxplot_by_class.png')
