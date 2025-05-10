@@ -93,11 +93,11 @@ To create a boxplot, I used the loop function to visualize how variables are dis
 
 ### G) Pairplot
 
+# 4. Summary
 
+# 5. References
 
-# 4. References
-
-4.1 Analysis of data
+5.1 Analysis of data
 
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.
 
@@ -105,7 +105,7 @@ https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head
 
 https://pandas.pydata.org/pandas-docs/stable/reference/frame.html
 
-4.2 Summary file
+5.2 Summary file
 
 https://chatgpt.com/c/6819f351-f14c-800b-b3d1-b2ddc1bd1965        # basic help to summary file
 
@@ -125,7 +125,7 @@ https://numpy.org/doc/stable/reference/generated/numpy.ndarray.tolist.html
 
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html
 
-4.3 Histogram
+5.3 Histogram
 
 https://stackoverflow.com/questions/43440821/the-real-difference-between-float32-and-float64   # float64 explanation
 
@@ -145,7 +145,7 @@ https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.tight_layout.html  #
 
 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html   # saving histogram to file
 
-4.4 Scatter Plot
+5.4 Scatter Plot
 
 https://www.geeksforgeeks.org/scatter-plot/    # What is a scatter plot
 
@@ -165,7 +165,7 @@ https://seaborn.pydata.org/generated/seaborn.scatterplot.html  # seaborn scatter
 
 https://matplotlib.org/stable/api/pyplot_summary.html # description of scatter plot with saving to a PNG file
 
-4.5 Boxplot
+5.5 Boxplot
 
 https://www.geeksforgeeks.org/box-plot/  # What is a boxplot
 
@@ -177,7 +177,7 @@ https://seaborn.pydata.org/generated/seaborn.boxplot.html  # seaborn boxplot
 
 https://matplotlib.org/stable/api/pyplot_summary.html  # description of boxplot with saving to a PNG file
 
-4.6  Pairplot
+5.6  Pairplot
 
 
 
