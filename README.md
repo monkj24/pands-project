@@ -65,14 +65,14 @@ A summary of all calculations is included in the file summary.txt. With the help
 In statistics, a histogram is a graphical representation of the distribution of numerical data. A histogram visualizes data distribution in time, highlighting trends and patterns.
 The data frame was filtered to include only column names and data type float64. The float64 is a large bit of memory, used when precision matters mostly in scientific calculations. Allows concentrating on floating-point numbers, numbers with decimal places, and showing data to 17th decimal places. 
 To create a histogram, I used a loop function, which, by running through every column, creates different histograms. The code plt.figure(). creates a fresh, separate histogram from the data; without this, the plots might cross or be drawn on the same figure. Plotted histograms describe the count of bins, special colours, titles, and labels.
-The grids are adding to the plot for easy reading of values. The function plt.tight_layout() tidies up lables and title to be clear visible. 
+The grids are adding to the plot for easy reading of values. The function plt.tight_layout() tidies up labels and title to be clearly visible. 
 At the end, histograms are saved in files named after the column name with the extension .png.
 
 ### E) Scatter plots
 
 A scatter plot is a mathematical tool used to display data and show the relationship between two variables.  It is typically used to plot the relationship between one independent and one dependent variable. Each dot's position on the horizontal and vertical axes represents a single data point's value.
 Here, I use the seaborn library to more easily produce a scatter plot and create styling and color. Like in the histogram, the same function is used to filter data to include only column names with data type float64. Double 'for' used in a function must generate a relationship between column names, for example (sepal_length vs sepal_width), but avoid relationships of opposite (sepal_width vs sepal_length), and relationships of the same names (sepal_length vs sepal_length).
-I asked AI to explain me realtionship between columns in code col1, col2 =().  The table below describes those connection to understand better:
+I asked AI to explain the relationship between columns in code col1, col2 =().  The table below describes those connections to better understand:
 | `i` | `j` | `col1`          | `col2`          |
 | --- | --- | --------------- | --------------- |
 | 0   | 1   | 'sepal\_length' | 'sepal\_width'  |
@@ -82,13 +82,18 @@ I asked AI to explain me realtionship between columns in code col1, col2 =().  T
 | 1   | 3   | 'sepal\_width'  | 'petal\_width'  |
 | 2   | 3   | 'petal\_length' | 'petal\_width'  |
 
-The seaborn function sns.scatterplot() is used to plot one variable against another, seperates by class color (hue='class) , types gradient (palette='viridis').
-To the plot was added legend, title and labels with overlap prevention. At the end plots was saving as a png files named after two columns.
-
+The seaborn function sns.scatterplot() is used to plot one variable against another, separated by class color (hue='class), and type gradient (palette='viridis').
+A legend, a title, and labels with overlap prevention were added to the plot. At the end, plots were saved as PNG files named after the two columns.
 
 ### F) Box plots
 
+A box plot is a graph that displays the distribution of a dataset. It presents essential summary statistics such as the median, quartiles, and expected outliers in a clear and graphic format. Box plots allow  to present an overview of the distribution, highlight potential, and examine different datasets in a simple and visual format.
+
+To create a boxplot, I used the loop function to visualize how variables are distributed using quartiles. Function creates one separate boxplot for each class. All boxplots are saved as image files.
+
 ### G) Pairplot
+
+
 
 # 4. References
 
@@ -142,8 +147,42 @@ https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html   # sav
 
 4.4 Scatter Plot
 
-https://www.geeksforgeeks.org/scatter-plot/    # what is scatter plot
-https://chatgpt.com/c/681dc425-2774-800b-8247-00a5db63ac3a   # explanaition of realtionship between columns
+https://www.geeksforgeeks.org/scatter-plot/    # What is a scatter plot
+
+https://chatgpt.com/c/681dc425-2774-800b-8247-00a5db63ac3a   # explanation of relationship between columns 
+
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.select_dtypes.html   # df.type with float64
+
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.columns.html   # returns the column labels from DataFrame
+
+https://docs.python.org/3/tutorial/controlflow.html#for-statements # loop function with range(len)
+
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html    # plt.figure
+
+https://matplotlib.org/stable/users/explain/customizing.html#matplotlibrc-sample   # figsize(6,4)
+
+https://seaborn.pydata.org/generated/seaborn.scatterplot.html  # seaborn scatter plot
+
+https://matplotlib.org/stable/api/pyplot_summary.html # description of scatter plot with saving to a PNG file
+
+4.5 Boxplot
+
+https://www.geeksforgeeks.org/box-plot/  # What is a boxplot
+
+https://docs.python.org/3/tutorial/controlflow.html#for-statements   # for loop function
+
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html   # plt.figure
+
+https://seaborn.pydata.org/generated/seaborn.boxplot.html  # seaborn boxplot
+
+https://matplotlib.org/stable/api/pyplot_summary.html  # description of boxplot with saving to a PNG file
+
+4.6  Pairplot
+
+
+
+
+
 
 
 
