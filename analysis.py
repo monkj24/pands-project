@@ -101,8 +101,9 @@ for i in range(len(numeric_columns)):
     for j in range(i+1, len(numeric_columns)):   # generates relationship between columns
         col1 = numeric_columns[i]
         col2 = numeric_columns[j] 
-        plt.figure(figsize=(6, 4))
-        sns.scatterplot(data=df, x=col1, y=col2, hue='class', palette='viridis')  # use seaborn to plot
+        plt.figure(figsize=(6, 4))   # # specifies the width and height of the plot in inches (8 inches wide and 6 inches tall)
+        sns.scatterplot(data=df, x=col1, y=col2, hue='class', palette='viridis')  # use seaborn to plot, 
+                                                                                  # hue=class added different color to each class
         plt.title(f'Scatter plot of {col1} vs {col2}')
         plt.xlabel(col1)
         plt.ylabel(col2)
@@ -126,7 +127,7 @@ for column in numeric_columns:   # Used loop function through each numeric colum
 
 # 5: Pairplot
 
-sns.pairplot(df, hue='class', palette='coolwarm')
+sns.pairplot(df, hue='class', palette='coolwarm')  # use seaborn to plot pairplot, hue=class is a color code added to each class
 plt.savefig('pairplot.png')
 plt.close()
 
