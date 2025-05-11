@@ -11,7 +11,9 @@ The project investigates statistical approaches, data collection methods, and fu
 
 # 2. Iris Data
 
+This project focuses on analyzing the famous Iris dataset, which contains 150 samples from three species of Iris flowers (Iris setosa, Iris versicolor, Iris virginica). Each sample includes four numerical features: Sepal length, Sepal width, Petal length, Petal width
 
+The goal is to explore, visualize, and understand the relationships between these features and how they vary across different species
 
 The simplicity and structure of the Iris dataset made it an ideal starting point for understanding fundamental Programming and Scripting.
 
@@ -93,7 +95,19 @@ To create a boxplot, I used the loop function to visualize how variables are dis
 
 ### G) Pairplot
 
+A pairplot is used to illustrate the relationships between many variables in a dataset. A grid of scatter plots can help identify patterns, correlations, and trends in data by showing how various features interact with one another.
+
+To visualize a pairplot, I used the seaborn pairplot function and saved it in a PNG file.
+
 # 4. Summary
+
+The project started by loading the Iris dataset from a  .data file into the Pandas package, which allows for easy data processing. A summary of the dataset was then provided, which included column names, a data preview, and key statistical measurements including mean, minimum, and maximum. 
+To show value distribution, histograms were generated automatically for each numeric characteristic using plt.hist(). Each histogram was saved as a separate PNG file. To investigate how each feature differed between species, boxplots for all numeric columns were generated using sns.boxplot(), with class-based grouping and outliers hidden for clarity.
+Pairwise relationships between features were investigated using scatter plots made using sns.scatterplot(), which were color-coded by class and saved as separate images. Finally, a thorough sns.pairplot() was used to display all pairwise combinations of numeric attributes in a single grid, giving an overall picture of the dataset's structure.
+
+The project displayed skill in looping over data structures and automating analysis across numerous columns. It demonstrated the ability to develop modular and well-structured Python scripts using best programming standards. The project required developing and saving visuals with strong frameworks like Matplotlib and Seaborn. It also demonstrated an understanding of how to analyze basic statistical graphs in order to draw meaningful conclusions from data.
+
+The project successfully demonstrates the use of scripting in Python to perform basic data analysis and visualization. It shows how programming can support data understanding through automation and clear visual summaries. 
 
 # 5. References
 
@@ -178,6 +192,12 @@ https://seaborn.pydata.org/generated/seaborn.boxplot.html  # seaborn boxplot
 https://matplotlib.org/stable/api/pyplot_summary.html  # description of boxplot with saving to a PNG file
 
 5.6  Pairplot
+
+https://www.geeksforgeeks.org/python-seaborn-pairplot-method/  # What is pairplot
+
+https://seaborn.pydata.org/generated/seaborn.pairplot.html  # how to create a pairplot
+
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html  # saving pairplot 
 
 
 

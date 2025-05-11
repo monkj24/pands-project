@@ -1,1 +1,6 @@
-
+Python (3.x)
+VS Code – code editor and execution
+Pandas – data manipulation
+Matplotlib & Seaborn – data visualization
+NumPy – numerical operations
+Math - mathematical calculation
